@@ -45,11 +45,10 @@
 {
     [super viewDidLoad];
     
-    UIBarButtonItem *textItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(addText:)];
     UIBarButtonItem *imageItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(addImage:)];
-    self.navigationItem.rightBarButtonItems = @[textItem, imageItem];
+    self.navigationItem.rightBarButtonItems = @[imageItem];
     
-    self.navigationItem.title = @"SZRichTextViewTest";
+    self.navigationItem.title = @"SZRichTextViewDemo";
     
     SZText *text = [[SZText alloc] init];
     self.richTextObjects = [NSMutableArray arrayWithObject:text];
@@ -80,8 +79,6 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     SZRichTextObject *object = self.richTextObjects[indexPath.row];
-    NSLog(@"cell size: %@", NSStringFromCGSize(object.size));
-    NSLog(@"view size: %@", NSStringFromCGSize(self.collectionView.frame.size));
     return object.size;
 }
 
@@ -101,7 +98,7 @@
         return cell;
     }
     else {
-        NSLog(@"seriously this should never happen");
+        assert(@"seriously this should never happen");
         return nil;
     }
 }
@@ -115,18 +112,43 @@
 
 - (IBAction)addImage:(id)sender
 {
+    NSString *stringBeforeSelection = nil;
+    NSString *stringAfterSelection = nil;
+    if (self.activeTextView && self.activeText) {
+        NSRange selectedRange = self.activeTextView.selectedRange;
+        stringBeforeSelection = [self.activeText.text substringToIndex:selectedRange.location];
+        stringAfterSelection = [self.activeText.text substringFromIndex:selectedRange.location];
+        self.activeTextView.text = stringBeforeSelection;
+        self.activeText.text = stringBeforeSelection;
+    }
+    
     SZImage *image = [[SZImage alloc] init];
-    image.displayImage = [UIImage imageNamed:@"IMG_3429"];
+    image.underlyingImage = [UIImage imageNamed:@"IMG_3429"];
     [self.richTextObjects addObject:image];
     SZText *text = [[SZText alloc] init];
+    text.text = stringAfterSelection;
     [self.richTextObjects addObject:text];
     [self.collectionView.collectionViewLayout invalidateLayout];
 }
 
-- (IBAction)addText:(id)sender
+- (void)deleteImage:(SZImage *)image
 {
-    SZText *text = [[SZText alloc] init];
-    [self.richTextObjects addObject:text];
-    [self.collectionView reloadData];
+    if (image) {
+        NSInteger index = [self.richTextObjects indexOfObject:image];
+        if (index-1 >= 0 && index+1 < self.richTextObjects.count) {
+            SZRichTextObject *objectBeforeImage = self.richTextObjects[index-1];
+            SZRichTextObject *objectAfterImage = self.richTextObjects[index+1];
+            if ([objectBeforeImage isKindOfClass:[SZText class]] && [objectAfterImage isKindOfClass:[SZText class]]) {
+                SZText *textBeforeImage = (SZText *)objectBeforeImage;
+                SZText *textAfterImage = (SZText *)objectAfterImage;
+                textBeforeImage.text = [NSString stringWithFormat:@"%@\n%@", textBeforeImage.text, textAfterImage.text];
+                [self.richTextObjects removeObject:image];
+                [self.richTextObjects removeObject:textAfterImage];
+                [[NSNotificationCenter defaultCenter] postNotificationName:SZTextCollectionViewCellForceResizeNotification object:nil];
+                [self.collectionView reloadData];
+            }
+        }
+    }
 }
+
 @end

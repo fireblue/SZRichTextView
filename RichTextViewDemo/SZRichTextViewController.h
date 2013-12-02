@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "PSTCollectionView.h"
+#import "SZText.h"
+#import "SZImage.h"
 
 @interface SZRichTextViewController : UIViewController
 
 @property (nonatomic, strong) PSTCollectionView *collectionView;
+@property (nonatomic, weak) SZText *activeText;
 @property (nonatomic, weak) UITextView *activeTextView;
+
+- (void)deleteImage:(SZImage *)image;
 
 @end

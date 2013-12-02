@@ -17,9 +17,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k2y-5R-OTC">
+                        <rect key="frame" x="278" y="278" width="22" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <connections>
+                            <action selector="deleteFromRichTextView:" destination="WP4-YG-gs3" eventType="touchUpInside" id="ggF-Ir-3Tg"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="k2y-5R-OTC" secondAttribute="trailing" constant="20" id="JZt-KR-bcs"/>
+                <constraint firstAttribute="bottom" secondItem="k2y-5R-OTC" secondAttribute="bottom" constant="20" id="PLq-VJ-nRk"/>
+            </constraints>
             <size key="customSize" width="320" height="212"/>
             <connections>
                 <outlet property="imageView" destination="ULg-G1-aBn" id="Meb-Wh-y6e"/>

@@ -11,6 +11,8 @@
 
 #define SZTextCollectionViewCellReuseIdentifier @"SZTextCollectionViewCell"
 
+#define SZTextCollectionViewCellForceResizeNotification @"SZTextCollectionViewCellForceResizeNotification"
+
 @interface SZTextCollectionViewCell : SZRichTextCollectionViewCell
 
 @property (nonatomic, readonly) UITextView *textView;

@@ -24,6 +24,10 @@
 		6DC22B841837C05E00BB652A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC22B831837C05E00BB652A /* UIKit.framework */; };
 		6DD1C441184C9251000705D9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DD1C43E184C9251000705D9 /* Images.xcassets */; };
 		6DD1C442184C9251000705D9 /* SZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD1C440184C9251000705D9 /* SZAppDelegate.m */; };
+		6DD1C448184CA166000705D9 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD1C447184CA166000705D9 /* UIImage+Resize.m */; };
+		6DD1C453184CA784000705D9 /* OCActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD1C44E184CA784000705D9 /* OCActionSheet.m */; };
+		6DD1C454184CA784000705D9 /* OCAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD1C450184CA784000705D9 /* OCAlertView.m */; };
+		6DD1C455184CA784000705D9 /* OCBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD1C452184CA784000705D9 /* OCBarButtonItem.m */; };
 		F0960569FB5B4E46B9475675 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 628CE7BEE875440AA82974FF /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +61,14 @@
 		6DD1C43E184C9251000705D9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = RichTextViewDemo/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		6DD1C43F184C9251000705D9 /* SZAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SZAppDelegate.h; path = RichTextViewDemo/SZAppDelegate.h; sourceTree = SOURCE_ROOT; };
 		6DD1C440184C9251000705D9 /* SZAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SZAppDelegate.m; path = RichTextViewDemo/SZAppDelegate.m; sourceTree = SOURCE_ROOT; };
+		6DD1C446184CA166000705D9 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Resize.h"; path = "RichTextViewDemo/UIImage+Resize.h"; sourceTree = SOURCE_ROOT; };
+		6DD1C447184CA166000705D9 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Resize.m"; path = "RichTextViewDemo/UIImage+Resize.m"; sourceTree = SOURCE_ROOT; };
+		6DD1C44D184CA783000705D9 /* OCActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCActionSheet.h; sourceTree = "<group>"; };
+		6DD1C44E184CA784000705D9 /* OCActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCActionSheet.m; sourceTree = "<group>"; };
+		6DD1C44F184CA784000705D9 /* OCAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCAlertView.h; sourceTree = "<group>"; };
+		6DD1C450184CA784000705D9 /* OCAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCAlertView.m; sourceTree = "<group>"; };
+		6DD1C451184CA784000705D9 /* OCBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCBarButtonItem.h; sourceTree = "<group>"; };
+		6DD1C452184CA784000705D9 /* OCBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCBarButtonItem.m; sourceTree = "<group>"; };
 		7DB8CD9CBD974B6AAA09C2C8 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,6 +148,7 @@
 		6DC22B851837C05E00BB652A /* RichTextViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6DD1C44A184CA75C000705D9 /* Vendor */,
 				6DD1C43E184C9251000705D9 /* Images.xcassets */,
 				6DD1C43F184C9251000705D9 /* SZAppDelegate.h */,
 				6DD1C440184C9251000705D9 /* SZAppDelegate.m */,
@@ -159,6 +172,38 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
+		};
+		6DD1C44A184CA75C000705D9 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				6DD1C44C184CA783000705D9 /* UIKit-Components */,
+				6DD1C44B184CA76B000705D9 /* UIImage+Resize */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		6DD1C44B184CA76B000705D9 /* UIImage+Resize */ = {
+			isa = PBXGroup;
+			children = (
+				6DD1C446184CA166000705D9 /* UIImage+Resize.h */,
+				6DD1C447184CA166000705D9 /* UIImage+Resize.m */,
+			);
+			name = "UIImage+Resize";
+			sourceTree = "<group>";
+		};
+		6DD1C44C184CA783000705D9 /* UIKit-Components */ = {
+			isa = PBXGroup;
+			children = (
+				6DD1C44D184CA783000705D9 /* OCActionSheet.h */,
+				6DD1C44E184CA784000705D9 /* OCActionSheet.m */,
+				6DD1C44F184CA784000705D9 /* OCAlertView.h */,
+				6DD1C450184CA784000705D9 /* OCAlertView.m */,
+				6DD1C451184CA784000705D9 /* OCBarButtonItem.h */,
+				6DD1C452184CA784000705D9 /* OCBarButtonItem.m */,
+			);
+			name = "UIKit-Components";
+			path = "Vendor/UIKit-Components";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -267,11 +312,15 @@
 				6D16D2DF184C9018004FFE22 /* SZTextCollectionViewCell.m in Sources */,
 				6D16D2DC184C9018004FFE22 /* SZImageCollectionViewCell.m in Sources */,
 				6D16D2E7184C902B004FFE22 /* SZImage.m in Sources */,
+				6DD1C453184CA784000705D9 /* OCActionSheet.m in Sources */,
+				6DD1C455184CA784000705D9 /* OCBarButtonItem.m in Sources */,
+				6DD1C454184CA784000705D9 /* OCAlertView.m in Sources */,
 				6DD1C442184C9251000705D9 /* SZAppDelegate.m in Sources */,
 				6D16D2E8184C902B004FFE22 /* SZRichTextObject.m in Sources */,
 				6D16D2DE184C9018004FFE22 /* SZRichTextCollectionViewCell.m in Sources */,
 				6D16D2D3184C9006004FFE22 /* SZRichTextViewController.m in Sources */,
 				6D16D2D0184C8FF7004FFE22 /* main.m in Sources */,
+				6DD1C448184CA166000705D9 /* UIImage+Resize.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

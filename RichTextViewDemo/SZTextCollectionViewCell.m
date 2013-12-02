@@ -23,18 +23,20 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    [self registerKVO];
+    [self registerNotification];
 }
 
-- (void)registerKVO
+- (void)registerNotification
 {
     self.textView.delegate = self;
     self.richTextObject.size = self.textView.frame.size;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(forceResize) name:SZTextCollectionViewCellForceResizeNotification object:nil];
 }
 
 - (void)setRichTextObject:(SZText *)richTextObject
 {
     self.textView.text = richTextObject.text;
+    [self textViewDidChange:self.textView];
     _richTextObject = richTextObject;
 }
 
@@ -56,12 +58,23 @@
 - (void)textViewDidBeginEditing:(UITextView *)textView
 {
     self.parent.activeTextView = textView;
+    self.parent.activeText = self.richTextObject;
 }
 
 - (void)textViewDidEndEditing:(UITextView *)textView
 {
     self.parent.activeTextView = nil;
+    self.parent.activeText = nil;
 }
 
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:SZTextCollectionViewCellForceResizeNotification object:nil];
+}
+
+- (void)forceResize
+{
+    [self textViewDidChange:self.textView];
+}
 
 @end
