@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5023" systemVersion="13A598" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SZTextCollectionViewCell" id="JLj-Zz-ZNv" customClass="SZTextCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PmK-5Z-VPW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="PmK-5Z-VPW" secondAttribute="trailing" id="8Vi-uZ-lGB"/>
+                <constraint firstItem="PmK-5Z-VPW" firstAttribute="top" secondItem="JLj-Zz-ZNv" secondAttribute="top" id="b7c-lk-mek"/>
+                <constraint firstItem="PmK-5Z-VPW" firstAttribute="leading" secondItem="JLj-Zz-ZNv" secondAttribute="leading" id="vpd-bF-tVV"/>
+                <constraint firstAttribute="bottom" secondItem="PmK-5Z-VPW" secondAttribute="bottom" id="yUS-fj-n98"/>
+            </constraints>
+            <size key="customSize" width="322" height="50"/>
+            <connections>
+                <outlet property="textView" destination="PmK-5Z-VPW" id="7nm-EY-XTc"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>
