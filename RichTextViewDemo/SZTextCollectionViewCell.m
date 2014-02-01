@@ -35,14 +35,12 @@
 
 - (void)setRichTextObject:(SZText *)richTextObject
 {
-    NSLog(@"set rich text object");
     self.textView.text = richTextObject.text;
     _richTextObject = richTextObject;
 }
 
 - (void)textViewDidChange:(UITextView *)textView
 {
-    NSLog(@"text did change");
     CGFloat originalHeight = textView.frame.size.height;
     CGFloat fixedWidth = textView.frame.size.width;
     CGSize newSize = [textView sizeThatFits:CGSizeMake(fixedWidth, MAXFLOAT)];

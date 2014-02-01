@@ -15,7 +15,7 @@
     self = [super init];
     if (self) {
         self.size = CGSizeMake(320, 40);
-        self.font = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+        self.font = [UIFont systemFontOfSize:14];
         self.boundingSize = CGSizeMake(320, MAXFLOAT);
     }
     return self;
@@ -26,7 +26,7 @@
     CGRect calculatedRect = [self.text boundingRectWithSize:self.boundingSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.font} context:[NSStringDrawingContext new]];
     CGSize calculatedSize = calculatedRect.size;
     calculatedSize.width = MAX(calculatedSize.width, self.boundingSize.width);
-    calculatedSize.height = MAX(calculatedSize.height, 40);
+    calculatedSize.height = MAX(calculatedSize.height+30, 40);
     return calculatedSize;
 }
 

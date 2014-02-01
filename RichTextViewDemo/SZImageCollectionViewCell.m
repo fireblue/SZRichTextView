@@ -22,6 +22,26 @@
 
 @synthesize richTextObject = _richTextObject;
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        
+    }
+    return self;
+}
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    
+    self.imageView.layer.shadowColor = [[UIColor blackColor] CGColor];
+    self.imageView.layer.shadowOffset = CGSizeMake(0, 0);
+    self.imageView.layer.shadowRadius = 5;
+    self.imageView.layer.shadowOpacity = 0.8;
+    self.imageView.layer.shadowPath = [UIBezierPath bezierPathWithRect:self.imageView.bounds].CGPath;
+}
+
 - (void)setRichTextObject:(SZImage *)richTextObject
 {
     CGFloat originalWidth = richTextObject.underlyingImage.size.width;

@@ -14,7 +14,7 @@
 {
     self = [super init];
     if (self) {
-        self.size = CGSizeMake(320, 320);
+        self.size = CGSizeMake(320, 300);
     }
     return self;
 }

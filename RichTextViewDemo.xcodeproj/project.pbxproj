@@ -19,6 +19,9 @@
 		6D16D2E8184C902B004FFE22 /* SZRichTextObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D16D2E4184C902B004FFE22 /* SZRichTextObject.m */; };
 		6D16D2E9184C902B004FFE22 /* SZText.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D16D2E6184C902B004FFE22 /* SZText.m */; };
 		6D74A95B189BD03A007D27D8 /* SZAutoResizeTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D74A95A189BD03A007D27D8 /* SZAutoResizeTextView.m */; };
+		6D74A95E189CE7EB007D27D8 /* SZTitleText.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D74A95D189CE7EB007D27D8 /* SZTitleText.m */; };
+		6D74A961189CE914007D27D8 /* SZTitleTextCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D74A960189CE914007D27D8 /* SZTitleTextCollectionViewCell.m */; };
+		6D74A963189CE930007D27D8 /* SZTitleTextCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D74A962189CE930007D27D8 /* SZTitleTextCollectionViewCell.xib */; };
 		6DC22B801837C05E00BB652A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC22B7F1837C05E00BB652A /* Foundation.framework */; };
 		6DC22B821837C05E00BB652A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC22B811837C05E00BB652A /* CoreGraphics.framework */; };
 		6DC22B841837C05E00BB652A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC22B831837C05E00BB652A /* UIKit.framework */; };
@@ -55,6 +58,11 @@
 		6D16D2E6184C902B004FFE22 /* SZText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SZText.m; path = RichTextViewDemo/SZText.m; sourceTree = SOURCE_ROOT; };
 		6D74A959189BD03A007D27D8 /* SZAutoResizeTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SZAutoResizeTextView.h; path = RichTextViewDemo/SZAutoResizeTextView.h; sourceTree = SOURCE_ROOT; };
 		6D74A95A189BD03A007D27D8 /* SZAutoResizeTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SZAutoResizeTextView.m; path = RichTextViewDemo/SZAutoResizeTextView.m; sourceTree = SOURCE_ROOT; };
+		6D74A95C189CE7EB007D27D8 /* SZTitleText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SZTitleText.h; path = RichTextViewDemo/SZTitleText.h; sourceTree = SOURCE_ROOT; };
+		6D74A95D189CE7EB007D27D8 /* SZTitleText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SZTitleText.m; path = RichTextViewDemo/SZTitleText.m; sourceTree = SOURCE_ROOT; };
+		6D74A95F189CE914007D27D8 /* SZTitleTextCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SZTitleTextCollectionViewCell.h; path = RichTextViewDemo/SZTitleTextCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
+		6D74A960189CE914007D27D8 /* SZTitleTextCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SZTitleTextCollectionViewCell.m; path = RichTextViewDemo/SZTitleTextCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
+		6D74A962189CE930007D27D8 /* SZTitleTextCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SZTitleTextCollectionViewCell.xib; path = RichTextViewDemo/SZTitleTextCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
 		6DC22B7C1837C05E00BB652A /* RichTextViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RichTextViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DC22B7F1837C05E00BB652A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6DC22B811837C05E00BB652A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -98,6 +106,8 @@
 				6D16D2E4184C902B004FFE22 /* SZRichTextObject.m */,
 				6D16D2E5184C902B004FFE22 /* SZText.h */,
 				6D16D2E6184C902B004FFE22 /* SZText.m */,
+				6D74A95C189CE7EB007D27D8 /* SZTitleText.h */,
+				6D74A95D189CE7EB007D27D8 /* SZTitleText.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -113,6 +123,9 @@
 				6D16D2D9184C9018004FFE22 /* SZTextCollectionViewCell.h */,
 				6D16D2DA184C9018004FFE22 /* SZTextCollectionViewCell.m */,
 				6D16D2DB184C9018004FFE22 /* SZTextCollectionViewCell.xib */,
+				6D74A95F189CE914007D27D8 /* SZTitleTextCollectionViewCell.h */,
+				6D74A960189CE914007D27D8 /* SZTitleTextCollectionViewCell.m */,
+				6D74A962189CE930007D27D8 /* SZTitleTextCollectionViewCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -272,6 +285,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D74A963189CE930007D27D8 /* SZTitleTextCollectionViewCell.xib in Resources */,
 				6D16D2E0184C9018004FFE22 /* SZTextCollectionViewCell.xib in Resources */,
 				6DD1C441184C9251000705D9 /* Images.xcassets in Resources */,
 				6D16D2CD184C8FE7004FFE22 /* InfoPlist.strings in Resources */,
@@ -324,9 +338,11 @@
 				6D16D2DC184C9018004FFE22 /* SZImageCollectionViewCell.m in Sources */,
 				6D16D2E7184C902B004FFE22 /* SZImage.m in Sources */,
 				6DD1C453184CA784000705D9 /* OCActionSheet.m in Sources */,
+				6D74A961189CE914007D27D8 /* SZTitleTextCollectionViewCell.m in Sources */,
 				6DD1C455184CA784000705D9 /* OCBarButtonItem.m in Sources */,
 				6DD1C454184CA784000705D9 /* OCAlertView.m in Sources */,
 				6DD1C442184C9251000705D9 /* SZAppDelegate.m in Sources */,
+				6D74A95E189CE7EB007D27D8 /* SZTitleText.m in Sources */,
 				6D16D2E8184C902B004FFE22 /* SZRichTextObject.m in Sources */,
 				6D16D2DE184C9018004FFE22 /* SZRichTextCollectionViewCell.m in Sources */,
 				6D16D2D3184C9006004FFE22 /* SZRichTextViewController.m in Sources */,
