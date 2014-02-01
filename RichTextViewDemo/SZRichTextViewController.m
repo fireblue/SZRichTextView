@@ -79,6 +79,7 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     SZRichTextObject *object = self.richTextObjects[indexPath.row];
+    NSLog(@"CALCULATED SIZE: %@", NSStringFromCGSize(object.size));
     return object.size;
 }
 
@@ -114,10 +115,14 @@
 {
     NSString *stringBeforeSelection = nil;
     NSString *stringAfterSelection = nil;
+    
     if (self.activeTextView && self.activeText) {
         NSRange selectedRange = self.activeTextView.selectedRange;
         stringBeforeSelection = [self.activeText.text substringToIndex:selectedRange.location];
         stringAfterSelection = [self.activeText.text substringFromIndex:selectedRange.location];
+        if ([stringAfterSelection hasPrefix:@"\n"]) {
+            stringAfterSelection = [stringAfterSelection substringFromIndex:1];
+        }
         self.activeTextView.text = stringBeforeSelection;
         self.activeText.text = stringBeforeSelection;
     }

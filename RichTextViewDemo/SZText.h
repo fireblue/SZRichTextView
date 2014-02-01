@@ -11,5 +11,7 @@
 @interface SZText : SZRichTextObject
 
 @property (nonatomic, copy) NSString *text;
+@property (nonatomic, strong) UIFont *font;
+@property (nonatomic) CGSize boundingSize;
 
 @end

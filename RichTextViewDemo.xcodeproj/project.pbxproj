@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6D16D2CA184C8FD8004FFE22 /* RichTextViewDemo-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D16D2C9184C8FD8004FFE22 /* RichTextViewDemo-Info.plist */; };
 		6D16D2CD184C8FE7004FFE22 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D16D2CB184C8FE7004FFE22 /* InfoPlist.strings */; };
 		6D16D2D0184C8FF7004FFE22 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D16D2CE184C8FF7004FFE22 /* main.m */; };
 		6D16D2D3184C9006004FFE22 /* SZRichTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D16D2D2184C9006004FFE22 /* SZRichTextViewController.m */; };
@@ -19,6 +18,7 @@
 		6D16D2E7184C902B004FFE22 /* SZImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D16D2E2184C902B004FFE22 /* SZImage.m */; };
 		6D16D2E8184C902B004FFE22 /* SZRichTextObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D16D2E4184C902B004FFE22 /* SZRichTextObject.m */; };
 		6D16D2E9184C902B004FFE22 /* SZText.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D16D2E6184C902B004FFE22 /* SZText.m */; };
+		6D74A95B189BD03A007D27D8 /* SZAutoResizeTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D74A95A189BD03A007D27D8 /* SZAutoResizeTextView.m */; };
 		6DC22B801837C05E00BB652A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC22B7F1837C05E00BB652A /* Foundation.framework */; };
 		6DC22B821837C05E00BB652A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC22B811837C05E00BB652A /* CoreGraphics.framework */; };
 		6DC22B841837C05E00BB652A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC22B831837C05E00BB652A /* UIKit.framework */; };
@@ -53,6 +53,8 @@
 		6D16D2E4184C902B004FFE22 /* SZRichTextObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SZRichTextObject.m; path = RichTextViewDemo/SZRichTextObject.m; sourceTree = SOURCE_ROOT; };
 		6D16D2E5184C902B004FFE22 /* SZText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SZText.h; path = RichTextViewDemo/SZText.h; sourceTree = SOURCE_ROOT; };
 		6D16D2E6184C902B004FFE22 /* SZText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SZText.m; path = RichTextViewDemo/SZText.m; sourceTree = SOURCE_ROOT; };
+		6D74A959189BD03A007D27D8 /* SZAutoResizeTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SZAutoResizeTextView.h; path = RichTextViewDemo/SZAutoResizeTextView.h; sourceTree = SOURCE_ROOT; };
+		6D74A95A189BD03A007D27D8 /* SZAutoResizeTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SZAutoResizeTextView.m; path = RichTextViewDemo/SZAutoResizeTextView.m; sourceTree = SOURCE_ROOT; };
 		6DC22B7C1837C05E00BB652A /* RichTextViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RichTextViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DC22B7F1837C05E00BB652A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6DC22B811837C05E00BB652A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -115,6 +117,15 @@
 			name = Cells;
 			sourceTree = "<group>";
 		};
+		6D74A958189BD009007D27D8 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				6D74A959189BD03A007D27D8 /* SZAutoResizeTextView.h */,
+				6D74A95A189BD03A007D27D8 /* SZAutoResizeTextView.m */,
+			);
+			name = CustomViews;
+			sourceTree = "<group>";
+		};
 		6DC22B731837C05E00BB652A = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +166,7 @@
 				6DC22B861837C05E00BB652A /* Supporting Files */,
 				6D16D2D1184C9006004FFE22 /* SZRichTextViewController.h */,
 				6D16D2D2184C9006004FFE22 /* SZRichTextViewController.m */,
+				6D74A958189BD009007D27D8 /* CustomViews */,
 				6D16D2C3184C8977004FFE22 /* Cells */,
 				6D04734C1848997600D43E86 /* Objects */,
 			);
@@ -234,7 +246,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = SZ;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = SZX;
 			};
 			buildConfigurationList = 6DC22B771837C05E00BB652A /* Build configuration list for PBXProject "RichTextViewDemo" */;
@@ -262,7 +274,6 @@
 			files = (
 				6D16D2E0184C9018004FFE22 /* SZTextCollectionViewCell.xib in Resources */,
 				6DD1C441184C9251000705D9 /* Images.xcassets in Resources */,
-				6D16D2CA184C8FD8004FFE22 /* RichTextViewDemo-Info.plist in Resources */,
 				6D16D2CD184C8FE7004FFE22 /* InfoPlist.strings in Resources */,
 				6D16D2DD184C9018004FFE22 /* SZImageCollectionViewCell.xib in Resources */,
 			);
@@ -321,6 +332,7 @@
 				6D16D2D3184C9006004FFE22 /* SZRichTextViewController.m in Sources */,
 				6D16D2D0184C8FF7004FFE22 /* main.m in Sources */,
 				6DD1C448184CA166000705D9 /* UIImage+Resize.m in Sources */,
+				6D74A95B189BD03A007D27D8 /* SZAutoResizeTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,7 +354,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -381,7 +392,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
