@@ -192,8 +192,8 @@
         if ([string isEqualToString:@""]) {
             string = @"s";
         }
-        CGSize size = [string sizeWithFont:textView.font constrainedToSize:textView.bounds.size lineBreakMode:UILineBreakModeWordWrap];
-        
+        CGRect calculatedRect = [string boundingRectWithSize:CGSizeMake(textView.frame.size.width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:textView.font} context:[NSStringDrawingContext new]];
+        CGSize size = calculatedRect.size;
         // work out where that position would be relative to the textView's frame
         CGRect viewRect = [self.view convertRect:textView.frame fromView:textView.superview];
         int scrollHeight = viewRect.origin.y + size.height;
